@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "React for Beginners",
+    "instructor": "John Doe",
+    "price": 29.99,
+    "category": "Web Development",
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee"
+  },
+  {
+    "id": 2,
+    "title": "Next.js Full Guide",
+    "instructor": "Jane Smith",
+    "price": 39.99,
+    "category": "Frontend",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+  },
+  {
+    "id": 3,
+    "title": "Node.js & Express",
+    "instructor": "Alex Johnson",
+    "price": 34.5,
+    "category": "Backend",
+    "image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f"
+  },
+  {
+    "id": 4,
+    "title": "MongoDB Mastery",
+    "instructor": "Emily Brown",
+    "price": 25.0,
+    "category": "Database",
+    "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713"
+  },
+  {
+    "id": 5,
+    "title": "Advanced React Patterns",
+    "instructor": "Michael Lee",
+    "price": 44.99,
+    "category": "Frontend",
+    "image": "https://images.unsplash.com/photo-1555099962-4199c345e5dd"
+  },
+  {
+    "id": 6,
+    "title": "Full Stack MERN Bootcamp",
+    "instructor": "Sarah Wilson",
+    "price": 59.99,
+    "category": "Full Stack",
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+  },
+  {
+    "id": 7,
+    "title": "JavaScript Mastery",
+    "instructor": "David Kim",
+    "price": 27.5,
+    "category": "Programming",
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97"
+  },
+  {
+    "id": 8,
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Olivia Green",
+    "price": 22.99,
+    "category": "Design",
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8"
+  }
+]

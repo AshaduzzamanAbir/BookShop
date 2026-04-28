@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Atomic Habits",
+    "title": "Build Good Habits",
+    "price": 12.99,
+    "category": "Self Growth",
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c"
+  },
+  {
+    "id": 2,
+    "name": "Rich Dad Poor Dad",
+    "title": "Financial Education",
+    "price": 10.5,
+    "category": "Business",
+    "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794"
+  },
+  {
+    "id": 3,
+    "name": "The Alchemist",
+    "title": "Follow Your Dreams",
+    "price": 9.99,
+    "category": "Fiction",
+    "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93"
+  },
+  {
+    "id": 4,
+    "name": "Deep Work",
+    "title": "Focus & Productivity",
+    "price": 14.25,
+    "category": "Productivity",
+    "image": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d"
+  },
+  {
+    "id": 5,
+    "name": "Think and Grow Rich",
+    "title": "Success & Wealth Mindset",
+    "price": 11.99,
+    "category": "Business",
+    "image": "https://images.unsplash.com/photo-1516979187457-637abb4f9353"
+  },
+  {
+    "id": 6,
+    "name": "The Power of Now",
+    "title": "Spiritual Enlightenment",
+    "price": 13.49,
+    "category": "Self Growth",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+  },
+  {
+    "id": 7,
+    "name": "Zero to One",
+    "title": "Startup & Innovation",
+    "price": 15.0,
+    "category": "Business",
+    "image": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da"
+  },
+  {
+    "id": 8,
+    "name": "Harry Potter",
+    "title": "Fantasy Adventure",
+    "price": 18.75,
+    "category": "Fiction",
+    "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba"
+  }
+]
