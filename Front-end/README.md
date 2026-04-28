@@ -1,16 +1,144 @@
-# React + Vite
+# 📚 BookStore Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **React + Tailwind CSS** bookstore web application with authentication UI and clean user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
 
-## React Compiler
+👉 _Add your deployed link here (e.g. Vercel / Netlify)_
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔐 Login & Register UI (with validation)
+- ⚛️ Built with React (Vite)
+- 🎨 Styled using Tailwind CSS
+- 📱 Fully responsive design
+- 🌙 Dark mode support
+- 🧩 Modular component structure
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React (Vite)
+- **Styling:** Tailwind CSS
+- **Forms:** React Hook Form
+- **Routing:** React Router
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── components/
+ │    ├── Navbar.jsx
+ │    ├── LoginModal.jsx
+ │
+ ├── pages/
+ │    ├── Home.jsx
+ │    ├── Register.jsx
+ │
+ ├── App.jsx
+ ├── main.jsx
+```
+
+---
+
+## ⚙️ Getting Started
+
+Follow these steps to run the project locally:
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+```
+
+### 2️⃣ Navigate to project folder
+
+```bash
+cd your-repo-name
+```
+
+### 3️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 4️⃣ Start development server
+
+```bash
+npm run dev
+```
+
+👉 Now open:
+`http://localhost:5173`
+
+---
+
+## 🧪 Build for Production
+
+```bash
+npm run build
+```
+
+To preview production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 🔐 Authentication (Optional Setup)
+
+This project is ready to integrate with **Firebase Authentication**.
+
+Steps:
+
+1. Create a Firebase project
+2. Enable Email/Password authentication
+3. Add your Firebase config in your project
+4. Connect it with your login/register forms
+
+---
+
+## 🎯 Future Improvements
+
+- 📦 Backend integration (Node.js / Firebase)
+- 🛒 Add to cart functionality
+- 📚 Book listing API
+- 🔎 Search & filtering
+- ❤️ Wishlist feature
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repo
+2. Create your branch
+3. Commit your changes
+4. Push and create a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 🙌 Author
+
+Developed by **Ashaduzzaman Talukder Abir**
+
+---
+
+⭐ If you like this project, give it a star on GitHub!
