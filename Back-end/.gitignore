@@ -1,0 +1,91 @@
+# ----------------------
+# OS files
+# ----------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ----------------------
+# Logs
+# ----------------------
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ----------------------
+# Environment variables
+# ----------------------
+.env
+.env.*
+*.local
+
+# ----------------------
+# Dependency directories
+# ----------------------
+node_modules/
+vendor/
+venv/
+__pycache__/
+
+# ----------------------
+# Build / output
+# ----------------------
+dist/
+build/
+out/
+coverage/
+.tmp/
+.temp/
+
+# ----------------------
+# Python
+# ----------------------
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# ----------------------
+# Node / JS / TS
+# ----------------------
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ----------------------
+# IDE / Editors
+# ----------------------
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ----------------------
+# Mac / Linux hidden files
+# ----------------------
+.*
+!.gitignore
+!.gitattributes
+
+# ----------------------
+# Archives
+# ----------------------
+*.zip
+*.tar
+*.gz
+*.rar
+
+# ----------------------
+# Misc
+# ----------------------
+*.bak
+*.tmp
+*.temp
+*.swp

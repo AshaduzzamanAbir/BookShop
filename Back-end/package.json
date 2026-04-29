@@ -1,0 +1,27 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "e-commerce website",
+  "homepage": "https://github.com/AshaduzzamanAbir/BookShop#readme",
+  "bugs": {
+    "url": "https://github.com/AshaduzzamanAbir/BookShop/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshaduzzamanAbir/BookShop.git"
+  },
+  "license": "ISC",
+  "author": "ashaduzzaman abir",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.6.0",
+    "nodemon": "^3.1.14"
+  }
+}
