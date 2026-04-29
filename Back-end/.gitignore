@@ -88,4 +88,4 @@ pnpm-lock.yaml
 *.bak
 *.tmp
 *.temp
-*.swp
+*.swpgit push -u origin main
