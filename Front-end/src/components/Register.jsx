@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const {
@@ -8,8 +10,25 @@ const Register = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    const userInfo = {
+      fullname: data.fullname,
+      email: data.email,
+      password: data.password,
+    };
+
+    await axios
+      .post("http://localhost:3000/user/signup", userInfo)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data) {
+          toast.success("SignUp Successfully");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error("User Already Exist");
+      });
   };
 
   return (
@@ -28,23 +47,25 @@ const Register = () => {
           </legend>
 
           {/* Name */}
-          <label>Name</label>
+          <label>Full Name</label>
           <input
             type="text"
-            placeholder="Name"
+            placeholder="Full Name"
             className={`border px-3 py-2 rounded-md ${
-              errors.name ? "border-red-500" : ""
+              errors.fullname ? "border-red-500" : ""
             }`}
-            {...register("name", {
-              required: "Name is required",
+            {...register("fullname", {
+              required: "Full Name is required",
               minLength: {
                 value: 3,
-                message: "Name must be at least 3 characters",
+                message: "Full Name must be at least 3 characters",
               },
             })}
           />
-          {errors.name && (
-            <span className="text-red-500 text-sm">{errors.name.message}</span>
+          {errors.fullname && (
+            <span className="text-red-500 text-sm">
+              {errors.fullname.message}
+            </span>
           )}
 
           {/* Email */}

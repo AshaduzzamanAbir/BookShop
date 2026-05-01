@@ -1,4 +1,6 @@
+import axios from "axios";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const LoginModal = ({ open, setOpen }) => {
   const {
@@ -10,9 +12,27 @@ const LoginModal = ({ open, setOpen }) => {
 
   if (!open) return null;
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    const userInfo = {
+      email: data.email,
+      password: data.password,
+    };
 
-  console.log(watch("email"));
+    await axios
+      .post("http://localhost:3000/user/login", userInfo)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data) {
+          toast.success("Login Successfully");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error("User Not Found");
+      });
+  };
+
+  // console.log(watch("email"));
 
   return (
     <div

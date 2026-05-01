@@ -11,6 +11,7 @@ import { Route, Routes } from "react-router-dom";
 import Contact from "./Contact/Contact";
 import Course from "./Course/Course";
 import Register from "./components/Register";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,6 +24,7 @@ function App() {
         <Route path="/course" element={<Course />} />
         <Route path="/register" element={<Register />} />
       </Routes>
+      <Toaster />
     </>
   );
 }

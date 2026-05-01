@@ -1,10 +1,27 @@
 import React from "react";
-import books from "../data/list.json";
 import BookCard from "./BookCard";
+import { useState } from "react";
+import axios from "axios";
+import { useEffect } from "react";
 
 const FreeBooks = () => {
-  const filteredBooks = books.filter((book) => book.price >= 12);
-  console.log(filteredBooks);
+  const [books, setBooks] = useState([]);
+
+  // const filteredBooks = books.filter((book) => book.price >= 12);
+  // console.log(filteredBooks);
+
+  useEffect(() => {
+    const getBooks = async () => {
+      try {
+        const response = await axios.get("/book");
+        setBooks(response.data.book);
+        console.log(response.data.book);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getBooks();
+  }, []);
 
   return (
     <section className="w-full py-16 bg-gray-100">

@@ -20,4 +20,10 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   darkMode: "class",
   plugins: [tailwindcss()],
+  server: {
+    proxy: {
+      "/book": "http://localhost:3000",
+      "/user/singup": "http://localhost:3000",
+    },
+  },
 });
