@@ -24,7 +24,11 @@ const LoginModal = ({ open, setOpen }) => {
         console.log(res.data);
         if (res.data) {
           toast.success("Login Successfully");
+          setOpen(false);
+
+          window.location.reload();
         }
+        localStorage.setItem("User", JSON.stringify(res.data.user));
       })
       .catch((err) => {
         console.log(err);

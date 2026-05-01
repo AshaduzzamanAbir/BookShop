@@ -4,8 +4,12 @@ import { PiSunBold } from "react-icons/pi";
 import { HiOutlineMoon } from "react-icons/hi2";
 import { TiShoppingCart } from "react-icons/ti";
 import LoginModal from "./Login";
+import { useAuth } from "../context/AuthProvider";
+import Logout from "./Logout";
 
 const Navbar = () => {
+  const [authUser, setAuthUser] = useAuth();
+
   const [openLogin, setOpenLogin] = useState(false);
   const [open, setOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
@@ -120,17 +124,23 @@ const Navbar = () => {
               </button>
 
               {/* Profile */}
-              <img
-                src="https://i.pravatar.cc/40"
-                className="w-9 h-9 rounded-full"
-              />
 
-              <a
-                onClick={() => setOpenLogin(true)}
-                className="text-md border px-6 py-1 rounded-md hover:bg-black hover:text-white transition cursor-pointer"
-              >
-                login
-              </a>
+              {authUser ? (
+                <div className="flex items-center gap-3">
+                  <img
+                    src="https://i.pravatar.cc/40"
+                    className="w-9 h-9 rounded-full"
+                  />
+                  <Logout />
+                </div>
+              ) : (
+                <a
+                  onClick={() => setOpenLogin(true)}
+                  className="text-md border px-6 py-1 rounded-md hover:bg-black hover:text-white transition cursor-pointer"
+                >
+                  login
+                </a>
+              )}
 
               {/* Mobile Button */}
               <button

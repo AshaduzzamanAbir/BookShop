@@ -1,14 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { useAuth } from "../context/AuthProvider";
 
 const Register = () => {
+  const [authUser, setAuthUser] = useAuth(); // ✅ important
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  // ✅ get previous route or fallback
+  const from = location.state?.from?.pathname || "/";
 
   const onSubmit = async (data) => {
     const userInfo = {
@@ -21,8 +28,23 @@ const Register = () => {
       .post("http://localhost:3000/user/signup", userInfo)
       .then((res) => {
         console.log(res.data);
-        if (res.data) {
+        // if (res.data) {
+        //   toast.success("SignUp Successfully");
+        //   navigate(from, { replace: true });
+        // }
+        // localStorage.setItem("User", JSON.stringify(res.data.user));
+
+        if (res.data?.user) {
+          // ✅ set auth state
+          setAuthUser(res.data.user);
+
+          // ✅ store in localStorage
+          localStorage.setItem("User", JSON.stringify(res.data.user));
+
           toast.success("SignUp Successfully");
+
+          // ✅ navigate AFTER state update
+          navigate(from, { replace: true });
         }
       })
       .catch((err) => {
@@ -110,7 +132,7 @@ const Register = () => {
             </span>
           )}
 
-          <button className="bg-black text-white py-2 rounded-md mt-3 hover:bg-gray-800">
+          <button className="bg-black text-white py-2 rounded-md mt-3 cursor-pointer hover:bg-gray-800 active:bg-gray-600">
             Create Account
           </button>
 
